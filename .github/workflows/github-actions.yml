@@ -7,15 +7,14 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+      - run: echo "This job's status is ${{ job.status }}."
       - name: Setup Go
         uses: actions/setup-go@v2
         with:
-          go-version: '1.14.0' # The Go version to download (if necessary) and use.
+          go-version: '1.19.0' # The Go version to download (if necessary) and use.
 
       # Install all the dependencies
       - name: Install dependencies
@@ -25,7 +24,11 @@ jobs:
 
       # Run build of the application
       - name: Run build
-        run: go build . 
+        run: go build .
+        
+      # Run format check
+      - name: Format  
+        run: if [ "$(gofmt -s -l . | wc -l)" -gt 0 ]; then exit 1; fi
 
       # Run vet & lint on the code
       - name: Run vet & lint
