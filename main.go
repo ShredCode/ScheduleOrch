@@ -2,5 +2,7 @@ package main
 import "fmt"
 
 func main() {
-    fmt.Println("hello schedule")
+    fmt.Println("Welcome to the scheudle cli...")
+    fmt.Println("The intention is for this tooling to work with schedules and report their status")
+
 }
