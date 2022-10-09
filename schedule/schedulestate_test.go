@@ -1,4 +1,4 @@
-packagr schedule_test
+package schedule_test
 
 import "testing"
 
