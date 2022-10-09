@@ -10,7 +10,7 @@ const (
 	Delayed
 	Stopped
 	Init
-  Unknown
+ 	Unknown
 )
 
 //Function String will return a readable string of the int code of the schedule's state
