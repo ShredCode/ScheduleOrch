@@ -1,7 +1,7 @@
 package schedule_test
 
 import "testing"
-import "schedule"
+import "scheduleorch/schedule"
 
 func TestSchedule_Next(t *testing.T) {
     expected := "Running"
