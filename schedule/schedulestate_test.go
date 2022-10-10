@@ -1,10 +1,11 @@
 package schedule_test
 
 import "testing"
+import "schedule"
 
 func TestSchedule_Next(t *testing.T) {
     expected := "Running"
-    actual := ScheduleState.Running.String()
+    actual := schedule.ScheduleState.Running.String()
     if expected != actual {
         t.Errorf("Expected %s do not match actual %s", expected, actual)
     }
@@ -12,7 +13,7 @@ func TestSchedule_Next(t *testing.T) {
 
 func TestSchedule_Unknown(t *testing.T) {
     expected := "Unknown"
-    actual := ScheduleState.Unknown.String()
+    actual := schedule.ScheduleState.Unknown.String()
     if expected != actual {
         t.Errorf("Expected %s do not match actual %s", expected, actual)
     }
