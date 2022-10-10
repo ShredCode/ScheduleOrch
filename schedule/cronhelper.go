@@ -10,6 +10,6 @@ func Next(s string) time.Time {
   c := cron.New()
   c.AddFunc(s, func() { fmt.Println("Background task still runninh") })
 
-  return "" //c.ParseStandard(s).Nex()
+  return time.Now() //c.ParseStandard(s).Nex()
 
 }
