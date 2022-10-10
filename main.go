@@ -1,6 +1,6 @@
 package main
 
-import "schedulecli/cmd/schedulecli"
+import "scheduleorch/schedulecli/cmd/schedulecli"
 
 func main() {
     schedulecli.Execute()
