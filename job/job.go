@@ -1,7 +1,7 @@
 package job
 
 type Job interface {
-    Name string
-    Id string
-    RunningStatus bool
+    GetName() string
+    GetId() string
+    RunningStatus() string
 }
